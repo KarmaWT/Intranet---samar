@@ -8,15 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class CardComponent implements OnInit {
 
   sistemas = [
-    {nome: 'Enfermagem', link:'http://10.0.0.65:8080/servo/logon.jsp?sys=ENF&msgKey='},
-    {nome:'Médico',link:'http://10.0.0.65:8080/servo/logon.jsp?sys=ATE&msgKey='},
-    {nome:'Triagem', link:'http://10.0.0.65:8080/servo/logon.jsp?sys=TRI&msgKey='},
+    {nome: 'Enfermagem', link:'https://9159prd.cloudmv.com.br/mvpep'},
+    {nome: 'Médico',link:'https://9159prd.cloudmv.com.br/mvpep'},
+    {nome: 'Triagem', link:'https://9159prd.cloudmv.com.br/mvsacr'},
     {nome: 'Radiologia', link:'http://laudo.hospitalsamar.com.br/'},
     {nome: 'Google Chat', link:'https://mail.google.com/chat/u/0/#chat/home'},
     {nome: 'Gmail', link:'https://mail.google.com'},
     {nome: 'Suporte TI', link:'https://suporte.redesamar.com.br/'},
     {nome: 'Manutenção', link:'https://manutencao.redesamar.com.br/'},
-    {nome:'Evento adverso',link: 'https://docs.google.com/forms/d/e/1FAIpQLScP_geTiJmS-wDFgpBD613hgVw0NKN_wT_WU1bx6oSYqyCJ1A/viewform'}
+    {nome: 'Evento adverso',link: 'https://docs.google.com/forms/d/e/1FAIpQLScP_geTiJmS-wDFgpBD613hgVw0NKN_wT_WU1bx6oSYqyCJ1A/viewform'}
   ]
   icons = [
     {icon:'local_hospital'},
