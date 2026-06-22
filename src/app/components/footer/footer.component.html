@@ -1,36 +1,94 @@
-<div class="footer">
-  <div class="branches">
-    <h2>Informações</h2>
-    <div class="branches-name">Samar Ji-Paraná:</div>
-    <span> <mat-icon class="mat-18">location_on</mat-icon>R. Padre Adolfo Rhol, 1267 - Casa Preta, Ji-Paraná - RO, 76907-554</span>
-    <div class="branches-name">Samar Cacoal:</div>
-    <span> <mat-icon class="mat-18">location_on</mat-icon>Av. São Paulo, 2326 - Centro, Cacoal - RO, 76960-970</span>
-    <div class="branches-name">Samar Porto Velho:</div>
-    <span> <mat-icon class="mat-18">location_on</mat-icon>Av. Calama, 2585 - Liberdade, Porto Velho - RO, 76803-883</span>
-    <h2 class="branches-name-contact-title">Contato</h2>
-    <p class="contact-number"> <mat-icon>call</mat-icon> 0800 033 0393</p>
-  </div>
-  <div class="socials-group">
-    <h2 class="socials-group-title">Siga nossas redes</h2>
-    <a href="https://www.facebook.com/hospitalsamar/?locale=pt_BR" class="socials"  target="_blank">
-      <fa-icon [icon]="faFacebook">Facebook</fa-icon>
-      <span class="social-name">Facebook</span>
-    </a>
-    <a href="https://www.instagram.com/hospitalsamar/" class="socials"  target="_blank">
-      <fa-icon [icon]="faInstagram"></fa-icon>
-      <span class="social-name">Instagram</span>
-    </a>
-    <a href="https://www.linkedin.com/company/hospital-samar/posts/?feedView=all"  target="_blank" class="socials">
-      <fa-icon [icon]="faLinkedin"></fa-icon>
-      <span class="social-name">Linkedin</span>
-    </a>
+<footer class="footer">
+  <div class="footer-columns">
+
+    <!-- Coluna 1: Unidades -->
+    <div class="footer-col">
+      <h2 class="col-title">Unidades</h2>
+
+      <div class="branch">
+        <div class="branch-header">
+          <fa-icon [icon]="faMapMarkerAlt"></fa-icon>
+          <span class="branch-name">Porto Velho</span>
+        </div>
+        <a href="https://maps.app.goo.gl/UXVe7WEe68aB5XUD8" target="_blank" class="branch-address branch-address--link">
+          Av. Calama, 2585 - Liberdade, Porto Velho - RO, 76803-883
+        </a>
+      </div>
+
+      <hr class="branch-divider" />
+
+      <div class="branch">
+        <div class="branch-header">
+          <fa-icon [icon]="faMapMarkerAlt"></fa-icon>
+          <span class="branch-name">Cacoal</span>
+        </div>
+        <a href="https://maps.app.goo.gl/Y35wcAZubHFpLiBm6" target="_blank" class="branch-address branch-address--link">
+          Av. São Paulo, 2326 - Centro, Cacoal - RO, 76960-970
+        </a>
+      </div>
+
+      <hr class="branch-divider" />
+
+      <div class="branch">
+        <div class="branch-header">
+          <fa-icon [icon]="faMapMarkerAlt"></fa-icon>
+          <span class="branch-name">Ji-Paraná</span>
+        </div>
+        <a href="https://maps.app.goo.gl/qjgQgT5APMBePeiY9" target="_blank" class="branch-address branch-address--link">
+          R. Padre Adolfo Rhol, 1267 - Casa Preta, Ji-Paraná - RO, 76907-554
+        </a>
+      </div>
+    </div>
+
+    <!-- Coluna 2: Redes Sociais -->
+    <div class="footer-col footer-col--center">
+      <h2 class="col-title">Redes Sociais</h2>
+
+      <div class="socials-list">
+        <a href="https://www.facebook.com/hospitalsamar/?locale=pt_BR" target="_blank"
+          class="social-link social-link--facebook">
+          <fa-icon [icon]="faFacebook"></fa-icon>
+          <span>facebook.com/hospitalsamar</span>
+        </a>
+
+        <a href="https://www.instagram.com/hospitalsamar/" target="_blank" class="social-link social-link--instagram">
+          <fa-icon [icon]="faInstagram"></fa-icon>
+          <span>instagram.com/hospitalsamar</span>
+        </a>
+
+        <a href="https://www.linkedin.com/company/hospital-samar/posts/?feedView=all" target="_blank"
+          class="social-link social-link--linkedin">
+          <fa-icon [icon]="faLinkedin"></fa-icon>
+          <span>linkedin.com/company/hospital-samar</span>
+        </a>
+
+        <a href="https://api.whatsapp.com/send?phone=556992052781" target="_blank"
+          class="social-link social-link--whatsapp">
+          <fa-icon [icon]="faWhatsapp"></fa-icon>
+          <span>+55 (69) 9205-2781</span>
+        </a>
+
+        <a href="tel:08000330393" class="social-link social-link--phone">
+          <fa-icon [icon]="faPhone"></fa-icon>
+          <span>0800 033 0393</span>
+        </a>
+      </div>
+    </div>
+
+    <!-- Coluna 3: Política -->
+    <div class="footer-col footer-col--policy">
+      <img src="/assets/logo branca.png" alt="Hospital Samar" class="footer-logo" />
+
+      <div class="policy">
+        <a href="#!" class="policy-link" target="_blank">
+          <fa-icon [icon]="faPolicy"></fa-icon>
+          <span class="policy-title">Política de acesso</span>
+        </a>
+        <a href="https://ferkz.github.io/luisfernandomonteiro/" target="_blank" class="copyright">
+          Copyright © Coding Sales 2025. All rights reserved.
+        </a>
+      </div>
+    </div>
 
   </div>
-  <div class="policy">
-    <a href="#!" class="socials"  target="_blank">
-      <fa-icon [icon]="faPolicy"></fa-icon>
-      <span class="policy-title">Política de acesso</span>
-    </a>
-    <a href="https://ferkz.github.io/luisfernandomonteiro/" target="_blank" class="copyright"> Copyright © Coding Sales 2025. All rights reserved.</a>
-  </div>
-  </div>
+</footer>

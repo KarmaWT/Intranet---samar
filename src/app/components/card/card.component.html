@@ -3,12 +3,12 @@
     <div class="menu" *ngFor="let sistema of sistemas; let i = index">
       <a [href]="sistema.link" target="_blank" class="link">
         <mat-card class="card">
-          <mat-icon>{{ icons[i].icon }}</mat-icon>
-          <mat-card-actions align="end">
-            <button mat-button routerLink="">
-              <p class="text-button">{{ sistema.nome }}</p>
-            </button>
-          </mat-card-actions>
+          <div class="card-icon-wrapper">
+            <mat-icon class="card-icon">{{ icons[i].icon }}</mat-icon>
+          </div>
+          <div class="card-label">
+            <p class="text-button">{{ sistema.nome }}</p>
+          </div>
         </mat-card>
       </a>
     </div>

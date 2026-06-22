@@ -1,52 +1,88 @@
 <header>
   <header class="app-header">
     <mat-toolbar>
+
       <div class="logo">
         <img src="../../../assets/logo branca.png" alt="logo rede samar" width="190px">
       </div>
+
       <li class="burger" (click)="toggleMenu()">
-        <i class="material-icons">{{ isMenuOpen ? "close" : "menu" }}</i>
+        <i class="material-icons">
+          {{ isMenuOpen ? "close" : "menu" }}
+        </i>
       </li>
+
       <span class="spacer"></span>
+
       <div class="menu" [class.is-open]="isMenuOpen">
 
-        <!-- SEU BOTÃO ORIGINAL -->
-        <button mat-button routerLink="/" class="menu-item">Inicio</button>
+        <!-- INICIO -->
+        <button mat-button routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+          class="menu-item">
+          Inicio
+        </button>
 
-        <!--
-          NOVO DROPDOWN 'SISTEMA MV' ADICIONADO AQUI
-          Note que o nome 'sistemaMV' é novo e único
-        -->
-        <button mat-button class="menu-item" [matMenuTriggerFor]="sistemaMV">Sistema MV</button>
-        <mat-menu #sistemaMV="matMenu" class="sub-menu">
-          <!--
-            Usamos <a> (anchor tag) com href para links EXTERNOS.
-            O 'target="_blank"' faz o link abrir em uma NOVA ABA.
-          -->
-          <a mat-menu-item class="menu-item sub-menu" href="https://9159prd.cloudmv.com.br/mvsacr" target="_blank">
-            MV SACR
-          </a>
-          <a mat-menu-item class="menu-item sub-menu" href="https://9159prd.cloudmv.com.br/soul-mv/" target="_blank">
-            MV SOUL
-          </a>
-          <a mat-menu-item class="menu-item sub-menu" href="https://9159prd.cloudmv.com.br/mvpep" target="_blank">
-            MV PEP
-          </a>
-        </mat-menu>
-        <!-- FIM DO NOVO DROPDOWN -->
+        <!-- SISTEMAS MV -->
+        <div class="dropdown-wrapper" routerLinkActive="has-active-child" [routerLinkActiveOptions]="{ exact: false }">
 
-        <button mat-button class="menu-item" routerLink="/radiologia">Radiologia</button>
-        <button mat-button class="menu-item" routerLink="/enfermagem">Enfermagem</button>
+          <button mat-button class="menu-item" [matMenuTriggerFor]="sistemaMV" #mvTrigger="matMenuTrigger"
+            [class.menu-open]="mvTrigger.menuOpen">
+            Sistemas MV
+          </button>
 
-        <!-- SEU DROPDOWN ANTIGO -->
-        <button mat-button class="menu-item" [matMenuTriggerFor]="compras">Sistemas Administrativos</button>
-        <mat-menu #compras="matMenu" class="sub-menu">
-          <button  mat-menu-item class="menu-item sub-menu" routerLink="/compras">Compras</button>
-          <button  mat-menu-item class="menu-item">Outros</button>
-        </mat-menu>
+          <mat-menu #sistemaMV="matMenu">
+            <a mat-menu-item href="https://9159prd.cloudmv.com.br/mvsacr" routerLink="/sistemas-mv/sacr"
+              routerLinkActive="active">
+              MV SACR
+            </a>
+            <a mat-menu-item href="https://9159prd.cloudmv.com.br/soul-mv/" routerLink="/sistemas-mv/soul"
+              routerLinkActive="active">
+              MV SOUL
+            </a>
+            <a mat-menu-item href="https://9159prd.cloudmv.com.br/mvpep" routerLink="/sistemas-mv/pep"
+              routerLinkActive="active">
+              MV PEP
+            </a>
+          </mat-menu>
 
-        <button mat-button color="primary" class="menu-item" routerLink="/laboratorio">Laboratório</button>
+        </div>
+
+        <!-- RADIOLOGIA -->
+        <button mat-button routerLink="/radiologia" routerLinkActive="active" class="menu-item">
+          Radiologia
+        </button>
+
+        <!-- ENFERMAGEM -->
+        <button mat-button routerLink="/enfermagem" routerLinkActive="active" class="menu-item">
+          Enfermagem
+        </button>
+
+        <!-- SISTEMAS ADMIN -->
+        <div class="dropdown-wrapper" routerLinkActive="has-active-child" [routerLinkActiveOptions]="{ exact: false }">
+
+          <button mat-button class="menu-item" [matMenuTriggerFor]="compras" #adminTrigger="matMenuTrigger"
+            [class.menu-open]="adminTrigger.menuOpen">
+            Sistemas Administrativos
+          </button>
+
+          <mat-menu #compras="matMenu">
+            <button mat-menu-item routerLink="/compras" routerLinkActive="active">
+              Compras
+            </button>
+            <button mat-menu-item>
+              Outros
+            </button>
+          </mat-menu>
+
+        </div>
+
+        <!-- LAB -->
+        <button mat-button routerLink="/laboratorio" routerLinkActive="active" class="menu-item">
+          Laboratório
+        </button>
+
       </div>
-      </mat-toolbar>
+
+    </mat-toolbar>
   </header>
 </header>
