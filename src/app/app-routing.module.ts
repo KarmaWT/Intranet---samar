@@ -7,15 +7,15 @@ import { EnfermagemComponent } from './pages/enfermagem/enfermagem.component';
 import { ComprasComponent } from './pages/compras/compras.component';
 
 const routes: Routes = [
-  {path:'',component: CardComponent},
-  {path:'radiologia',component: RadiologiaComponent},
-  {path:'laboratorio',component: LaboratorioComponent},
-  {path:'enfermagem', component: EnfermagemComponent},
-  {path:'compras', component: ComprasComponent }
+  { path: '', component: CardComponent },
+  { path: 'radiologia', component: RadiologiaComponent },
+  { path: 'laboratorio', component: LaboratorioComponent },
+  { path: 'enfermagem', component: EnfermagemComponent },
+  { path: 'compras', component: ComprasComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

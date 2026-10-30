@@ -3,13 +3,10 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-compras',
   templateUrl: './compras.component.html',
-  styleUrls: ['./compras.component.scss']
+  styleUrls: ['./compras.component.scss'],
 })
 export class ComprasComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

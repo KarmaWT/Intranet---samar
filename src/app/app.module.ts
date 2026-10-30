@@ -6,13 +6,13 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CardComponent } from './components/card/card.component';
 
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon';
-import {MatButtonModule} from '@angular/material/button';
-import {MatMenuModule} from '@angular/material/menu';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatMenuModule } from '@angular/material/menu';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FooterComponent } from './components/footer/footer.component';
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
 import { SistemasComponent } from './pages/sistemas/sistemas.component';
 import { ContainerComponent } from './components/container/container.component';
 import { RadiologiaComponent } from './pages/radiologia/radiologia.component';
@@ -34,9 +34,8 @@ import { SystemCardComponent } from './components/system-card/system-card.compon
     EnfermagemComponent,
     LaboratorioComponent,
     ComprasComponent,
-    SystemCardComponent
-
-   ],
+    SystemCardComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -46,10 +45,9 @@ import { SystemCardComponent } from './components/system-card/system-card.compon
     MatCardModule,
     BrowserAnimationsModule,
     FontAwesomeModule,
-    MatMenuModule
-
+    MatMenuModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

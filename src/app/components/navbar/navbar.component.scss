@@ -71,7 +71,14 @@ $secondaryColor: #3dc4df;
   width: 90px;
   height: 60px;
   align-items: center;
-  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 175%;
+    height: auto;
+  }
+
 
   @media (max-width: $menuBreakpoint) {
     display: none;
